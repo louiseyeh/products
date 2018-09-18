@@ -15,3 +15,9 @@ print(products)
 
 for p in products: #for loop 搞清楚清單內每一項目
 	print(p[0], '的價格是', p[1])
+
+with open('products.csv', 'w') as f:  #'w' 寫入模式(write)
+	for p in products:
+		f.write(p[0] + ',' + p[1] + '\n') # 用+來合併字串(str) 
+		                                  #f.write() 才是真正寫入
+		                                  #用','分隔存成csv才會分隔
