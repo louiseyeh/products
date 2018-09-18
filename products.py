@@ -11,4 +11,7 @@ while True:
 	products.append([name, price])
 print(products)
 
-products[0][0] #存取二維清單
+#products[0][0] #存取二維清單
+
+for p in products: #for loop 搞清楚清單內每一項目
+	print(p[0], '的價格是', p[1])
