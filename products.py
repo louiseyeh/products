@@ -1,5 +1,11 @@
-
+# 讀取檔案
 products = []
+with open('products.csv', 'r',encoding='utf-8') as f:
+	for line in f:
+		name, price = line.strip().split(',')  #split() 完變清單 ,等號前直接定義清單名稱
+		products.append([name, price])
+print(products)
+
 while True:
 	name = input('請輸入商品名稱:')
 	if name == 'q': #quit
